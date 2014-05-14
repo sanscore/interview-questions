@@ -1,0 +1,7 @@
+Q) Find the largest subsequence in a given array?
+
+example: 
+ a = [5, 25, 8, 18, 12, 16, 22, 4, 24]
+ lis(a); // => 
+
+A)
