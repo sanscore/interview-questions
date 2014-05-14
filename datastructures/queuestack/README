@@ -1,0 +1,19 @@
+Q) Create a Queue implemented with a Stack.
+
+A) 
+Notes:
+  Queues are a FIFO structure
+  Stacks are a LIFO structure
+  To create a Queue with a Stack Implentation you need to somehow either:
+    a) pop() an element from the bottom of the Stack, or
+    b) push() an element to the bottom of the Stack
+  To accomplish this choose to either the enqueue or the dequeue method to
+    apply the correction.
+  With dequeue, pop() each stack element onto a new, temporary Stack. Once the
+    Stack is emptied, pop() the first element form the temp Stack and save it 
+    as the return value. pop() the remaining elements from the temp Stack back
+    to the permanent Stack using the push() method. Finally, return the saved 
+    element.
+  With enqueue, the process would be the same except you would push the new
+    element onto the permanent Stack once it is emptied; saving the return 
+    value. Then empty the temp Stack onto the permanent Stack.:
