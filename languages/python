@@ -1,0 +1,80 @@
+Quick Notes
+  * Object oriented
+  * Indentation delimits blocks
+  * if __name__ == "__main__": #use file as a script
+
+Data Types
+  Numbers - 2+2; 3.75; (3+1j)
+  Strings - 'spam'; "eggs"; """multiple lines allowed"""; u'unicode string'
+  Lists - ['spam', 'eggs', 42]
+  Tuples - 'spam', 'eggs', 42 # immutable Lists
+  Sets - set(['spam', 'eggs', 42]) #unordered list, no dups
+  Dictionaries - {'foo': 42, 'bar':'baz'}
+  
+Variable Types
+Pseudo-Variables
+Regular Expressions
+  In standard library...
+
+Control Expressions
+  while expr
+    pass
+
+  if expr:
+    pass
+  elif expr:
+    pass
+  else:
+    pass
+
+  for w in words:
+    print w
+
+  *List Compreh: squares = [x**2 for x in range(10)]
+
+  * range(5) - create a list of 5 elements 0..4
+  * break - exit loop
+  * continue - start loop at next iteration
+
+Define Class
+  class SomeClass(SuperClass[, Multiple, Inheritance])
+    ...
+Define Namespace
+Define Function/Method
+  def fib(n)
+    a,b = 0,1
+    while a < n:
+      print a
+      a,b = b, a+b
+  
+  * Default args: def foo(bar=42)
+  * Keyword args: foo(bar=24)
+  * Globbing: def(..., *glob_arg)
+  * Dict arg: def(..., **dict_arg)
+  * Lambdas: lambda x: x+n
+  *
+
+Access Restriction
+  * DNE
+  * Convention: leading space means private i.e. _spam
+
+Exceptions
+  try:
+    pass
+  except ValueError:
+    print "oops"
+  else:
+    pass
+  finally:
+    pass
+
+  raise SomeError('Oops')
+
+  class SomeError(Exception)
+
+I/O
+  print 'some string'
+  print '{0} {1}'.format('foo', bar')
+  print '{foo} {bar}'.format(foo=42, bar='baz')
+  
+  f = open('somefile', 'w')
