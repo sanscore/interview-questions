@@ -1,0 +1,119 @@
+Quick Notes
+  * Object-oriented
+  * Interpreted
+  * General-purpose
+
+Data Types
+  Integers (Fixnum, Bignum) - 123; -1; 0xff; 0b101011; 0777
+  Floats - 1.2; -2.1;
+  Strings - "foo"; 'bar'; %q{single quote, no interp}; %Q{Double quote}; %{baz}
+  Arrays - [1, 2, "foo"]
+  Hashes - {foo: 1, :bar => 'baz'}
+  Ranges - (1..5); (1...6)
+  Regexp - /pattern/
+
+Variable Types
+  $global
+  @@class
+  @instance
+  CONSTANT
+  local
+  Module::Class::...
+
+Pseudo-Variables
+  self
+  true
+  false
+  nil
+
+Regular Expressions
+  Modifiers
+    i - ignore case
+    o - interp #{} once
+    x - ignore whitespace, allow comments
+    m - multiline
+
+Control Expressions
+  if expr
+    #if true, do something
+  elsif expr
+    #if true, do something else
+  else
+    #or some other thing
+  end
+
+  do_something unless expr #don't use else statements w/ unless
+
+  case expr
+    when expr/class/comparison
+    when ...
+    else
+      #default
+  end
+
+  loop do; body; end; # endless loop
+
+  while expr
+    body
+  end
+
+  until expr
+    body
+  end
+
+  begin
+    body
+  end while expr
+
+  for x in expr
+    body
+  end
+
+  expr.each do |x[,y,z,...]|
+    body
+  end
+
+  do_something while expr
+
+  * break - terminate loop
+  * next - start next iteration
+  * retry - repeat w/ condition
+  * redo - repeat w/o condition
+
+Define Class
+
+class SomeClass < SuperClass
+  ...
+end
+
+Define Module
+
+class SomeModule
+  ...
+end
+
+Define Method
+  def some_method(arg, *glob_arg, &block_arg)
+    ...
+  end
+
+Access Restriction
+  * public
+  * protected - accessible to subclasses and instances
+  * private - accessible to instances
+
+Exceptions
+  raise ExceptionClass, "message"
+
+  begin
+    ...
+  rescue ExceptionClass => e
+    puts e
+  else
+    ...
+  ensure
+    #finally block
+  end
+
+  catch(:foo)... throw(:foo) #allows escaping nested loops
+
